@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Community</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar') %>
+    <h1>Explore Our Community</h1>
+
+    <ul>
+      <% users.forEach(u => { %>
+      <li>
+        <a href="/community/<%= u._id %>"><%= u.username %></a>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>

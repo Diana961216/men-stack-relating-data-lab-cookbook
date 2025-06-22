@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= otherUser.username %>'s Pantry</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar') %>
+
+    <h1><%= otherUser.username %>'s Pantry</h1>
+
+    <% if (otherUser.foods.length > 0) { %>
+    <ul>
+      <% otherUser.foods.forEach(food => { %>
+      <li><%= food.name %></li>
+      <% }) %>
+    </ul>
+    <% } else { %>
+    <p>This user has no pantry items yet.</p>
+    <% } %>
+
+    <a href="/community">Back to Community</a>
+  </body>
+</html>
