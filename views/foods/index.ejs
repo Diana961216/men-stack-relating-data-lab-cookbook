@@ -31,6 +31,13 @@
         >
           <button type="submit">Edit</button>
         </form>
+        <form
+          action="/users/<%= user._id %>/foods/new"
+          method="GET"
+          style="display: inline"
+        >
+          <button type="submit">Add New Food</button>
+        </form>
       </li>
       <% }) %>
     </ul>
