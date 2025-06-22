@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit <%= food.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar') %>
+
+    <h1>Edit <%= food.name %></h1>
+
+    <form
+      action="/users/<%= user._id %>/foods/<%= food._id %>?_method=PUT"
+      method="POST"
+    >
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="<%= food.name %>"
+        required
+      />
+      <button type="submit">Update Food</button>
+    </form>
+
+    <a href="/users/<%= user._id %>/foods">Cancel</a>
+  </body>
+</html>

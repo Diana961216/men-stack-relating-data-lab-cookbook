@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= food.name %> - Details</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar') %>
+
+    <h1><%= food.name %></h1>
+
+    <a href="/users/<%= user._id %>/foods/<%= food._id %>/edit">Edit</a>
+    <a href="/users/<%= user._id %>/foods">Back to Pantry</a>
+  </body>
+</html>
